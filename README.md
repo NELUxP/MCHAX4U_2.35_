@@ -20,3 +20,4 @@ otherwise Minecraft update 1.18.1v
 
 [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
 
+<img src="https://canary.discord.com/channels/@me/993173400862339142/993310240160370829" align="middle" />
