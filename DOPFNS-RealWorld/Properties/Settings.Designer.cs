@@ -22,5 +22,17 @@ namespace DOPFNS_RealWorld.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string userIp {
+            get {
+                return ((string)(this["userIp"]));
+            }
+            set {
+                this["userIp"] = value;
+            }
+        }
     }
 }

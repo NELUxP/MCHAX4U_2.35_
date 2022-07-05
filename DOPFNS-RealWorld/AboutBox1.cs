@@ -7,7 +7,6 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
-using System;
 using System.IO;
 
 namespace DOPFNS_RealWorld
@@ -20,7 +19,7 @@ namespace DOPFNS_RealWorld
         public AboutBox1()
         {
             InitializeComponent();
-
+            pictureBox1.Draggable(true);
         }
 
         #region Assembly Attribute Accessors
@@ -145,7 +144,30 @@ namespace DOPFNS_RealWorld
 
         private void AboutBox1_Load(object sender, EventArgs e)
         {
+            pictureBox1.Location = new Point(1, 129);
+            timer1.Start();
+        }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (pictureBox1.Location.X > 600)
+            {
+                pictureBox1.Location = new Point(-166, pictureBox1.Location.Y);
+            }
+            else
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X + 2, pictureBox1.Location.Y);
+            }
+        }
+
+        private void AboutBox1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            timer1.Stop();
         }
     }
 }

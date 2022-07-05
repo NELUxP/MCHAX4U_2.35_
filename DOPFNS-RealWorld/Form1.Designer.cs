@@ -42,9 +42,9 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.AttachBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxwalkingduck = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -59,6 +59,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxwalkingduck)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxPS44IP
@@ -68,12 +69,14 @@
             this.textBoxPS44IP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPS44IP.ForeColor = System.Drawing.Color.Black;
             this.textBoxPS44IP.Location = new System.Drawing.Point(7, 169);
+            this.textBoxPS44IP.MaxLength = 15;
             this.textBoxPS44IP.Name = "textBoxPS44IP";
             this.textBoxPS44IP.Size = new System.Drawing.Size(219, 29);
             this.textBoxPS44IP.TabIndex = 1;
             this.textBoxPS44IP.Text = "192.168.1.XXX";
             this.textBoxPS44IP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxPS44IP.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBoxPS44IP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPS44IP_KeyPress);
             // 
             // textBoxnamechanger
             // 
@@ -81,6 +84,7 @@
             this.textBoxnamechanger.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.textBoxnamechanger.ForeColor = System.Drawing.Color.Black;
             this.textBoxnamechanger.Location = new System.Drawing.Point(926, 66);
+            this.textBoxnamechanger.MaxLength = 22;
             this.textBoxnamechanger.Name = "textBoxnamechanger";
             this.textBoxnamechanger.Size = new System.Drawing.Size(187, 26);
             this.textBoxnamechanger.TabIndex = 1;
@@ -152,7 +156,7 @@
             this.connectBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.connectBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.connectBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(18)))), ((int)(((byte)(23)))));
-            this.connectBtn.Location = new System.Drawing.Point(7, 200);
+            this.connectBtn.Location = new System.Drawing.Point(7, 199);
             this.connectBtn.Name = "connectBtn";
             this.connectBtn.Size = new System.Drawing.Size(219, 34);
             this.connectBtn.TabIndex = 4;
@@ -165,13 +169,11 @@
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.AttachBtn);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.connectBtn);
             this.panel1.Controls.Add(this.textBoxPS44IP);
-            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.pictureBoxwalkingduck);
             this.panel1.Location = new System.Drawing.Point(-3, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(234, 563);
@@ -182,9 +184,9 @@
             // 
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(53, 519);
+            this.pictureBox4.Location = new System.Drawing.Point(167, 513);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(42, 41);
+            this.pictureBox4.Size = new System.Drawing.Size(51, 51);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 21;
             this.pictureBox4.TabStop = false;
@@ -194,9 +196,9 @@
             // 
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(5, 519);
+            this.pictureBox3.Location = new System.Drawing.Point(4, 512);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(42, 41);
+            this.pictureBox3.Size = new System.Drawing.Size(58, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 20;
             this.pictureBox3.TabStop = false;
@@ -213,21 +215,6 @@
             this.label6.Size = new System.Drawing.Size(200, 26);
             this.label6.TabIndex = 19;
             this.label6.Text = "Connect    /    Attach";
-            // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(18)))), ((int)(((byte)(23)))));
-            this.button3.Location = new System.Drawing.Point(5, 482);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(219, 34);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "About";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_2);
             // 
             // AttachBtn
             // 
@@ -248,13 +235,25 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(15, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(35, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 134);
+            this.pictureBox1.Size = new System.Drawing.Size(153, 134);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBoxwalkingduck
+            // 
+            this.pictureBoxwalkingduck.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxwalkingduck.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxwalkingduck.Image")));
+            this.pictureBoxwalkingduck.Location = new System.Drawing.Point(4, 267);
+            this.pictureBoxwalkingduck.Name = "pictureBoxwalkingduck";
+            this.pictureBoxwalkingduck.Size = new System.Drawing.Size(219, 246);
+            this.pictureBoxwalkingduck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxwalkingduck.TabIndex = 22;
+            this.pictureBoxwalkingduck.TabStop = false;
+            this.pictureBoxwalkingduck.Click += new System.EventHandler(this.pictureBoxwalkingduck_Click);
             // 
             // label7
             // 
@@ -262,7 +261,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label7.Location = new System.Drawing.Point(90, 297);
+            this.label7.Location = new System.Drawing.Point(585, 8);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 16);
             this.label7.TabIndex = 9;
@@ -275,11 +274,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label5.Location = new System.Drawing.Point(50, 272);
+            this.label5.Location = new System.Drawing.Point(451, 8);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(126, 16);
+            this.label5.Size = new System.Drawing.Size(66, 16);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Welcome Message";
+            this.label5.Text = "Welcome";
             // 
             // panel2
             // 
@@ -337,25 +336,31 @@
             // checkBoxUnfairAttack
             // 
             this.checkBoxUnfairAttack.AutoSize = true;
+            this.checkBoxUnfairAttack.BackColor = System.Drawing.Color.Indigo;
+            this.checkBoxUnfairAttack.Enabled = false;
             this.checkBoxUnfairAttack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxUnfairAttack.ForeColor = System.Drawing.Color.White;
             this.checkBoxUnfairAttack.Location = new System.Drawing.Point(238, 104);
             this.checkBoxUnfairAttack.Name = "checkBoxUnfairAttack";
             this.checkBoxUnfairAttack.Size = new System.Drawing.Size(108, 21);
             this.checkBoxUnfairAttack.TabIndex = 14;
             this.checkBoxUnfairAttack.Text = "Unfair Attack";
-            this.checkBoxUnfairAttack.UseVisualStyleBackColor = true;
+            this.checkBoxUnfairAttack.UseVisualStyleBackColor = false;
             this.checkBoxUnfairAttack.CheckedChanged += new System.EventHandler(this.checkBoxUnfairAttack_CheckedChanged);
             // 
             // checkBoxRapidhit
             // 
             this.checkBoxRapidhit.AutoSize = true;
+            this.checkBoxRapidhit.BackColor = System.Drawing.Color.Indigo;
+            this.checkBoxRapidhit.Enabled = false;
             this.checkBoxRapidhit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxRapidhit.Location = new System.Drawing.Point(238, 71);
+            this.checkBoxRapidhit.ForeColor = System.Drawing.Color.White;
+            this.checkBoxRapidhit.Location = new System.Drawing.Point(238, 68);
             this.checkBoxRapidhit.Name = "checkBoxRapidhit";
             this.checkBoxRapidhit.Size = new System.Drawing.Size(85, 21);
             this.checkBoxRapidhit.TabIndex = 15;
             this.checkBoxRapidhit.Text = "Rapid Hit";
-            this.checkBoxRapidhit.UseVisualStyleBackColor = true;
+            this.checkBoxRapidhit.UseVisualStyleBackColor = false;
             this.checkBoxRapidhit.CheckedChanged += new System.EventHandler(this.checkBoxRapidhit_CheckedChanged);
             // 
             // buttonHelp
@@ -388,7 +393,9 @@
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.textBoxnamechanger);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
@@ -398,6 +405,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -409,6 +417,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxwalkingduck)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,11 +445,11 @@
         private System.Windows.Forms.CheckBox checkBoxUnfairAttack;
         private System.Windows.Forms.CheckBox checkBoxRapidhit;
         private System.Windows.Forms.Button buttonHelp;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBoxwalkingduck;
     }
 }
 

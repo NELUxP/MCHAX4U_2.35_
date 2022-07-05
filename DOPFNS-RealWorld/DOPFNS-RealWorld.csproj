@@ -95,6 +95,7 @@
     <Compile Include="AboutBox1.Designer.cs">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExtesionDraggable.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,7 +120,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -149,6 +149,7 @@
   <ItemGroup>
     <None Include="Resources\BOUNCE.wav" />
     <None Include="Resources\Vanze - Survive %28feat. Neon Dreams%29 [NCS Release] %281%29.wav" />
+    <None Include="Resources\zoomed.png" />
     <Content Include="zoomed.ico" />
   </ItemGroup>
   <ItemGroup />
