@@ -11,7 +11,7 @@ otherwise Minecraft update 1.18.1v
 ## Also useful
 
 - [PS4 Cheater & ps4debug](https://github.com/ctn123/PS4_Cheater) - PS4 Cheater is a homebrew application to find game cheat codes. It is based on ps4debug.
-- [PS4 Save Mounter](https://github.com/ctn123/Binary-Releases) - PS4 Cheater is a homebrew application to find game cheat codes. It is based on ps4debug.
+- [PS4 Save Mounter](https://github.com/ctn123/Binary-Releases) - Mount the game saves on your ps4.It is based on ps4debug.
 
 
 <img class="no-click screenshot-image" src="https://img001.prntscr.com/file/img001/GOeKsreMSuO8hxbZfLLREA.png" crossorigin="anonymous" alt="Lightshot screenshot" id="screenshot-image" image-id="280i7u6">
